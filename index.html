@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Elson Pereira | Software Engineer</title>
+
+    <meta name="description"
+          content="Elson Pereira's professional portfolio showcasing software engineering, IT skills, and projects.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b1120;
+            color: #e5e7eb;
+            line-height: 1.7;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 8%;
+            background: #111827;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav h2 {
+            color: #60a5fa;
+        }
+
+        nav a {
+            color: #e5e7eb;
+            text-decoration: none;
+            margin-left: 18px;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        section {
+            padding: 75px 10%;
+            scroll-margin-top: 85px;
+        }
+
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            line-height: 1.15;
+            margin: 15px 0;
+        }
+
+        .highlight {
+            color: #60a5fa;
+        }
+
+        .hero p {
+            max-width: 650px;
+            color: #cbd5e1;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+        }
+
+        .tagline {
+            color: #60a5fa;
+            font-weight: bold;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 22px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin: 5px 8px 5px 0;
+        }
+
+        .button:hover {
+            background: #1d4ed8;
+        }
+
+        .secondary {
+            background: transparent;
+            border: 1px solid #60a5fa;
+        }
+
+        h2.section-title {
+            font-size: 2rem;
+            margin-bottom: 25px;
+        }
+
+        .about {
+            background: #111827;
+        }
+
+        .content {
+            max-width: 850px;
+        }
+
+        .content p {
+            margin-bottom: 16px;
+            color: #cbd5e1;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background: #172554;
+            color: #bfdbfe;
+            padding: 9px 15px;
+            border: 1px solid #1e40af;
+            border-radius: 6px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit, minmax(250px, 1fr)
+            );
+            gap: 20px;
+        }
+
+        .card {
+            background: #111827;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #263449;
+        }
+
+        .card h3 {
+            color: #93c5fd;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #cbd5e1;
+            margin-bottom: 15px;
+        }
+
+        .card a {
+            color: #60a5fa;
+        }
+
+        .experience-item {
+            border-left: 3px solid #3b82f6;
+            padding: 5px 0 5px 22px;
+            margin-bottom: 28px;
+        }
+
+        .experience-item h3 {
+            color: #93c5fd;
+        }
+
+        .experience-item p {
+            color: #cbd5e1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 10%;
+            background: #111827;
+            color: #94a3b8;
+        }
+
+        footer a {
+            color: #60a5fa;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                padding: 18px 5%;
+            }
+
+            nav a {
+                margin-left: 0;
+                margin-right: 12px;
+            }
+
+            section {
+                padding: 55px 7%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>Elson Pereira</h2>
+
+        <div>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <p class="tagline">SOFTWARE ENGINEER | IT PROFESSIONAL</p>
+
+        <h1>
+            Hi, I'm <span class="highlight">Elson Pereira.</span>
+        </h1>
+
+        <h2>Building solutions through technology.</h2>
+
+        <p>
+            I have a background in software engineering and a
+            Master's degree in Information Technology and Systems
+            from the University of Canberra. I enjoy solving
+            technical problems, developing software, and exploring
+            cloud technologies.
+        </p>
+
+        <div>
+            <a href="#projects" class="button">Explore My Projects</a>
+            <a href="#contact" class="button secondary">Get In Touch</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="content">
+            <h2 class="section-title">About Me</h2>
+
+            <p>
+                I am an IT professional with experience in software
+                engineering, application troubleshooting, databases,
+                and technical support.
+            </p>
+
+            <p>
+                I completed my Master of Information Technology and
+                Systems at the University of Canberra. My studies
+                included computer vision, image processing, and
+                software technology.
+            </p>
+
+            <p>
+                I enjoy learning new technologies, collaborating
+                with others, and finding practical solutions to
+                technical challenges. My long-term goal is to grow
+                into a technical solutions architect role.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Technical Skills</h2>
+
+        <div class="skills">
+            <span class="skill">Java</span>
+            <span class="skill">Python</span>
+            <span class="skill">HTML & CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">SQL</span>
+            <span class="skill">MySQL</span>
+            <span class="skill">PostgreSQL</span>
+            <span class="skill">SQL Server</span>
+            <span class="skill">REST APIs</span>
+            <span class="skill">Git</span>
+            <span class="skill">Postman</span>
+            <span class="skill">Apache Tomcat</span>
+            <span class="skill">Application Troubleshooting</span>
+            <span class="skill">Incident Resolution</span>
+            <span class="skill">Software Testing</span>
+            <span class="skill">Cloud Technologies</span>
+        </div>
+
+        <p style="margin-top: 20px; color: #94a3b8;">
+            Skills listed here should reflect your actual experience
+            and current proficiency.
+        </p>
+    </section>
+
+    <section class="about" id="projects">
+        <h2 class="section-title">Featured Projects</h2>
+
+        <div class="projects">
+
+            <div class="card">
+                <h3>Social Awareness Web Application</h3>
+
+                <p>
+                    A single-page application designed to raise
+                    awareness of social issues and help promote
+                    small businesses.
+                </p>
+
+                <p>
+                    <strong>Technologies:</strong>
+                    React, Express.js, MySQL
+                </p>
+
+                <a href="https://github.com/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    View project repositories →
+                </a>
+            </div>
+
+            <div class="card">
+                <h3>Software Engineering</h3>
+
+                <p>
+                    My professional background includes application
+                    development, database technologies, software
+                    troubleshooting, and testing.
+                </p>
+
+                <a href="https://github.com/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Explore GitHub →
+                </a>
+            </div>
+
+            <div class="card">
+                <h3>More Projects Coming Soon</h3>
+
+                <p>
+                    I am continuing to develop projects that
+                    demonstrate my skills in software development,
+                    IT systems, and cloud technologies.
+                </p>
+
+                <a href="https://github.com/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Visit GitHub →
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2 class="section-title">Education & Experience</h2>
+
+        <div class="experience-item">
+            <h3>Master of Information Technology and Systems</h3>
+            <p>University of Canberra, Australia</p>
+        </div>
+
+        <div class="experience-item">
+            <h3>Software Engineer</h3>
+            <p>Mobileware Technologies Pvt. Ltd.</p>
+            <p>October 2020 – February 2022</p>
+            <p>
+                Worked with Java, JSP, Servlets, relational databases,
+                Microsoft SQL Server, HTML, and CSS.
+            </p>
+        </div>
+
+    </section>
+
+    <section class="about" id="contact">
+        <h2 class="section-title">Let's Connect</h2>
+
+        <div class="content">
+            <p>
+                I'm interested in connecting with professionals,
+                learning about new technologies, and exploring
+                opportunities in software engineering and IT.
+            </p>
+
+            <a class="button"
+               href="https://www.linkedin.com/"
+               target="_blank"
+               rel="noopener noreferrer">
+                LinkedIn
+            </a>
+
+            <a class="button secondary"
+               href="https://github.com/"
+               target="_blank"
+               rel="noopener noreferrer">
+                GitHub
+            </a>
+
+            <!-- Add your professional email address here. -->
+        </div>
+    </section>
+
+    <footer>
+        <p>
+            © <span id="year"></span> Elson Pereira.
+            Built with HTML and CSS.
+        </p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+</html>
