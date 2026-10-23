@@ -4,1785 +4,490 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f3ee">
-
-  <meta
-    name="description"
-    content="Elson Pereira — software engineer and IT professional exploring thoughtful technology, practical solutions, and better systems."
-  >
-
+  <meta name="description" content="Elson Pereira — software engineer and IT professional building practical, people-focused technology solutions.">
   <title>Elson Pereira — Engineer, problem-solver, curious human</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
-
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --paper: #f5f3ee;
-      --ink: #18221e;
-      --muted: #68716b;
-      --line: #d9ddd5;
-      --green: #c8f169;
-      --green-dark: #2d4d31;
-      --card: #fffefa;
-      --lavender: #e5defa;
-      --orange: #ff956d;
-      --shadow: 0 18px 50px rgba(30, 45, 34, .08);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 88px;
-    }
-
-    body {
-      margin: 0;
-      background: var(--paper);
-      color: var(--ink);
-      font-family: "DM Sans", sans-serif;
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    button,
-    a {
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    .wrap {
-      width: min(1120px, calc(100% - 44px));
-      margin: 0 auto;
-    }
-
-    .mono {
-      font: 500 11px/1.4 "DM Mono", monospace;
-      text-transform: uppercase;
-      letter-spacing: .12em;
-    }
-
-    /* Navigation */
-
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 30;
-      backdrop-filter: blur(18px);
-      background: rgba(245, 243, 238, .86);
-      border-bottom: 1px solid rgba(217, 221, 213, .8);
-    }
-
-    .nav {
-      min-height: 74px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 22px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 11px;
-      text-decoration: none;
-      font-weight: 800;
-      letter-spacing: -.04em;
-    }
-
-    .brand-mark {
-      display: grid;
-      place-items: center;
-      width: 34px;
-      height: 34px;
-      background: var(--green);
-      border-radius: 50%;
-      font: 700 13px "DM Mono", monospace;
-    }
-
-    .navlinks {
-      display: flex;
-      align-items: center;
-      gap: 25px;
-    }
-
-    .navlinks a {
-      text-decoration: none;
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    .navlinks a:hover {
-      color: var(--ink);
-    }
-
-    .nav-cta {
-      padding: 10px 15px;
-      border: 1px solid var(--ink);
-      border-radius: 999px;
-      color: var(--ink) !important;
-    }
-
-    /* Hero section */
-
-    .hero {
-      padding: 78px 0 72px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.25fr .75fr;
-      align-items: center;
-      gap: 55px;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      color: var(--green-dark);
-      margin-bottom: 22px;
-    }
-
-    .status-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #6eaa42;
-      box-shadow: 0 0 0 5px rgba(110, 170, 66, .13);
-    }
-
-    h1,
-    h2,
-    h3,
-    p {
-      margin-top: 0;
-    }
-
-    h1 {
-      font: 800 clamp(48px, 7.2vw, 86px)/.99 "Manrope", sans-serif;
-      letter-spacing: -.075em;
-      max-width: 750px;
-      margin-bottom: 25px;
-    }
-
-    h1 .soft {
-      color: #7e887f;
-    }
-
-    .hero-copy {
-      font-size: 17px;
-      max-width: 580px;
-      color: #58645b;
-      line-height: 1.8;
-      margin-bottom: 29px;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 11px;
-      align-items: center;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      text-decoration: none;
-      padding: 13px 18px;
-      border-radius: 999px;
-      border: 1px solid var(--ink);
-      font-weight: 700;
-      font-size: 13px;
-      transition: transform .2s, background .2s;
-    }
-
-    .btn:hover {
-      transform: translateY(-3px);
-    }
-
-    .btn.primary {
-      background: var(--ink);
-      color: white;
-    }
-
-    .btn.secondary {
-      background: transparent;
-    }
-
-    /* Profile image composition */
-
-    .hero-art {
-      min-height: 365px;
-      position: relative;
-      display: grid;
-      place-items: center;
-    }
-
-    .orbit {
-      position: absolute;
-      width: 320px;
-      height: 320px;
-      border: 1px solid #cdd4c9;
-      border-radius: 50%;
-      transform: rotate(-23deg) scaleY(.76);
-    }
-
-    .orbit:after {
-      content: "";
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--orange);
-      top: 27px;
-      left: 57px;
-    }
-
-    .profile-card {
-      width: min(280px, 80%);
-      aspect-ratio: .82;
-      border-radius: 145px 145px 28px 28px;
-      background: var(--green);
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-end;
-      box-shadow: var(--shadow);
-      transform: rotate(3deg);
-    }
-
-    /*
-      PROFILE PHOTO
-      Place elson-pereira.jpg beside index.html.
-    */
-
-    .profile-photo {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 25%;
-      border-radius: 145px 145px 28px 28px;
-      border: 1px solid rgba(0, 0, 0, 0.12);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-      z-index: 1;
-      transition: transform .35s ease;
-    }
-
-    .profile-card:hover .profile-photo {
-      transform: scale(1.025);
-    }
-
-    .profile-card:before {
-      content: "";
-      position: absolute;
-      width: 190px;
-      height: 190px;
-      border-radius: 50%;
-      background: #e6f7bc;
-      top: 28px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .monogram {
-      position: absolute;
-      top: 64px;
-      font: 800 88px/.9 "Manrope", sans-serif;
-      letter-spacing: -.1em;
-      color: #31523a;
-      z-index: 1;
-    }
-
-    /*
-      Show the EP monogram only if the photo cannot load.
-    */
-
-    .profile-card .monogram {
-      display: none;
-    }
-
-    .profile-caption {
-      width: calc(100% - 28px);
-      margin: 0 14px 14px;
-      background: rgba(255, 254, 250, .92);
-      backdrop-filter: blur(8px);
-      padding: 13px 15px;
-      border-radius: 17px;
-      position: relative;
-      z-index: 2;
-      flex-shrink: 0;
-    }
-
-    .profile-caption strong {
-      display: block;
-      font-size: 13px;
-    }
-
-    .profile-caption span {
-      color: var(--muted);
-      font-size: 11px;
-    }
-
-    .floating-note {
-      position: absolute;
-      z-index: 3;
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 13px;
-      padding: 12px 15px;
-      box-shadow: var(--shadow);
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .note-one {
-      top: 48px;
-      right: -4px;
-      transform: rotate(5deg);
-    }
-
-    .note-two {
-      bottom: 38px;
-      left: -8px;
-      transform: rotate(-5deg);
-      background: var(--lavender);
-    }
-
-    /* Moving ticker */
-
-    .ticker {
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      padding: 16px 0;
-      overflow: hidden;
-    }
-
-    .ticker-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 22px;
-      color: var(--muted);
-      flex-wrap: wrap;
-    }
-
-    .ticker span {
-      white-space: nowrap;
-    }
-
-    .ticker .star {
-      color: #7b8f53;
-      font-size: 19px;
-      padding: 0 7px;
-    }
-
-    /* General sections */
-
-    section.content-section {
-      padding: 94px 0;
-    }
-
-    .section-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 25px;
-      margin-bottom: 34px;
-    }
-
-    .section-label {
-      color: var(--muted);
-      margin-bottom: 12px;
-    }
-
-    h2 {
-      font: 800 clamp(32px, 4.5vw, 52px)/1.08 "Manrope", sans-serif;
-      letter-spacing: -.06em;
-      margin-bottom: 0;
-    }
-
-    .section-intro {
-      max-width: 380px;
-      color: var(--muted);
-      margin-bottom: 4px;
-      font-size: 14px;
-    }
-
-    /* About */
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: .8fr 1.2fr;
-      gap: 60px;
-    }
-
-    .about-stamp {
-      border-radius: 24px;
-      min-height: 300px;
-      padding: 28px;
-      background: var(--lavender);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .stamp-big {
-      font: 800 76px/.9 "Manrope", sans-serif;
-      letter-spacing: -.09em;
-    }
-
-    .stamp-bottom {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      font-size: 12px;
-      color: #4f4a6b;
-    }
-
-    .about-text {
-      font-size: 17px;
-      color: #58645b;
-      line-height: 1.9;
-    }
-
-    .about-text strong {
-      color: var(--ink);
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 25px;
-    }
-
-    .pill {
-      border: 1px solid var(--line);
-      padding: 8px 12px;
-      border-radius: 999px;
-      font-size: 12px;
-      color: #58645b;
-      background: rgba(255, 254, 250, .5);
-    }
-
-    /* Projects */
-
-    .dark-section {
-      background: #202c25;
-      color: #f6f5ee;
-    }
-
-    .dark-section .section-label,
-    .dark-section .section-intro {
-      color: #b9c3b9;
-    }
-
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-    }
-
-    .project {
-      background: #2a392f;
-      border: 1px solid #415146;
-      border-radius: 22px;
-      overflow: hidden;
-      transition: transform .25s, border-color .25s;
-    }
-
-    .project:hover {
-      transform: translateY(-5px);
-      border-color: #9cb97c;
-    }
-
-    .project-visual {
-      min-height: 190px;
-      padding: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .visual-social {
-      background: #d6edb0;
-      color: #213a27;
-    }
-
-    .visual-code {
-      background: #dcd4f4;
-      color: #302b48;
-    }
-
-    .visual-cloud {
-      background: #f4b69b;
-      color: #472e25;
-    }
-
-    .visual-data {
-      background: #b8dce0;
-      color: #1e3c40;
-    }
-
-    .visual-shape {
-      width: 160px;
-      height: 115px;
-      border: 1.5px solid currentColor;
-      border-radius: 12px;
-      transform: rotate(-7deg);
-      display: flex;
-      flex-direction: column;
-      gap: 9px;
-      padding: 16px;
-      box-shadow: 12px 13px 0 rgba(0, 0, 0, .08);
-    }
-
-    .visual-shape span {
-      height: 7px;
-      border-radius: 4px;
-      background: currentColor;
-      opacity: .45;
-      width: 80%;
-    }
-
-    .visual-shape span:nth-child(2) {
-      width: 55%;
-    }
-
-    .visual-shape span:nth-child(3) {
-      width: 68%;
-    }
-
-    .visual-word {
-      font: 800 36px/.95 "Manrope", sans-serif;
-      letter-spacing: -.08em;
-      transform: rotate(-5deg);
-    }
-
-    .project-body {
-      padding: 23px 24px 25px;
-    }
-
-    .project-meta {
-      color: #bdc9bd;
-      font: 11px "DM Mono", monospace;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-    }
-
-    .project h3 {
-      font: 700 22px "Manrope", sans-serif;
-      letter-spacing: -.04em;
-      margin: 12px 0 9px;
-    }
-
-    .project p {
-      color: #c2cec3;
-      font-size: 13px;
-      line-height: 1.8;
-      margin-bottom: 18px;
-    }
-
-    .project-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-    }
-
-    .project-tags span {
-      color: #e3e9de;
-      border: 1px solid #536357;
-      padding: 5px 9px;
-      border-radius: 999px;
-      font-size: 10px;
-    }
-
-    .project-footnote {
-      margin-top: 20px;
-      color: #b9c3b9;
-      font-size: 12px;
-    }
-
-    /* Experience and education */
-
-    .timeline {
-      border-top: 1px solid var(--line);
-    }
-
-    .timeline-row {
-      display: grid;
-      grid-template-columns: 170px 1fr;
-      gap: 30px;
-      padding: 27px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .timeline-date {
-      font: 11px "DM Mono", monospace;
-      text-transform: uppercase;
-      color: var(--muted);
-      padding-top: 5px;
-    }
-
-    .timeline-row h3 {
-      font: 700 21px "Manrope", sans-serif;
-      letter-spacing: -.04em;
-      margin-bottom: 5px;
-    }
-
-    .timeline-row .where {
-      color: var(--green-dark);
-      font-size: 13px;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-
-    .timeline-row p {
-      color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 0;
-      max-width: 690px;
-    }
-
-    /* Skills */
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 13px;
-    }
-
-    .skill-card {
-      padding: 23px;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: var(--card);
-    }
-
-    .skill-icon {
-      width: 35px;
-      height: 35px;
-      border-radius: 11px;
-      background: var(--green);
-      display: grid;
-      place-items: center;
-      font-weight: 800;
-      margin-bottom: 18px;
-    }
-
-    .skill-card h3 {
-      font: 700 17px "Manrope", sans-serif;
-      margin-bottom: 8px;
-    }
-
-    .skill-card p {
-      color: var(--muted);
-      font-size: 13px;
-      margin-bottom: 0;
-    }
-
-    /* Contact */
-
-    .contact-shell {
-      background: var(--green);
-      border-radius: 28px;
-      padding: clamp(28px, 5vw, 58px);
-      display: grid;
-      grid-template-columns: 1fr .85fr;
-      gap: 45px;
-      align-items: start;
-    }
-
-    .contact-shell h2 {
-      max-width: 520px;
-    }
-
-    .contact-shell .section-label {
-      color: #405a35;
-    }
-
-    .contact-copy {
-      color: #405a35;
-      margin: 19px 0 25px;
-      max-width: 430px;
-    }
-
-    .contact-links {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .contact-link {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 15px;
-      text-decoration: none;
-      background: rgba(255, 255, 255, .43);
-      border: 1px solid rgba(24, 34, 30, .12);
-      padding: 13px 15px;
-      border-radius: 13px;
-      font-size: 13px;
-      font-weight: 700;
-      overflow-wrap: anywhere;
-    }
-
-    .contact-link:hover {
-      background: rgba(255, 255, 255, .72);
-    }
-
-    .starter-title {
-      font: 700 15px "Manrope", sans-serif;
-      margin-bottom: 6px;
-    }
-
-    .starter-help {
-      color: #405a35;
-      font-size: 12px;
-      margin-bottom: 14px;
-    }
-
-    .starter-list {
-      display: grid;
-      gap: 9px;
-    }
-
-    .starter {
-      text-align: left;
-      border: 1px solid rgba(24, 34, 30, .18);
-      border-radius: 13px;
-      background: rgba(255, 255, 255, .32);
-      padding: 12px 14px;
-      cursor: pointer;
-      color: var(--ink);
-      font: 600 12px/1.55 "DM Sans", sans-serif;
-      transition: background .2s, transform .2s;
-    }
-
-    .starter:hover,
-    .starter.active {
-      background: #fffefa;
-      transform: translateX(3px);
-    }
-
-    .starter small {
-      display: block;
-      color: #63715e;
-      font: 10px "DM Mono", monospace;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      margin-bottom: 4px;
-    }
-
-    .contact-submit {
-      margin-top: 13px;
-      width: 100%;
-      border: 0;
-      cursor: pointer;
-    }
-
-    /* Footer */
-
-    .footer {
-      padding: 28px 0 35px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    .footer a {
-      text-decoration: none;
-    }
-
-    /* Scroll animations */
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(18px);
-      transition: opacity .7s ease, transform .7s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .cursor-dot {
-      display: inline-block;
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--orange);
-      margin-left: 5px;
-      vertical-align: middle;
-    }
-
-    /* Accessibility */
-
-    @media (prefers-reduced-motion: reduce) {
-      *,
-      *::before,
-      *::after {
-        scroll-behavior: auto !important;
-        transition: none !important;
-        animation: none !important;
-      }
-
-      .reveal {
-        opacity: 1;
-        transform: none;
-      }
-    }
-
-    /* Tablet */
-
-    @media (max-width: 800px) {
-      .hero-grid,
-      .about-grid,
-      .contact-shell {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding-top: 55px;
-      }
-
-      .hero-art {
-        min-height: 330px;
-        margin-top: 0;
-      }
-
-      .orbit {
-        width: 275px;
-        height: 275px;
-      }
-
-      .profile-card {
-        width: 235px;
-      }
-
-      .section-head {
-        display: block;
-      }
-
-      .section-intro {
-        margin-top: 16px;
-      }
-
-      .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .contact-shell {
-        gap: 30px;
-      }
-    }
-
-    /* Mobile */
-
-    @media (max-width: 560px) {
-      .wrap {
-        width: min(calc(100% - 30px), 1120px);
-      }
-
-      .nav {
-        min-height: 65px;
-      }
-
-      .navlinks {
-        gap: 12px;
-      }
-
-      .navlinks a:not(.nav-cta) {
-        display: none;
-      }
-
-      .hero {
-        padding: 49px 0 45px;
-      }
-
-      .hero-grid {
-        gap: 16px;
-      }
-
-      .hero-copy {
-        font-size: 15px;
-      }
-
-      .hero-art {
-        min-height: 300px;
-      }
-
-      .note-one {
-        right: 0;
-      }
-
-      .note-two {
-        left: 0;
-      }
-
-      section.content-section {
-        padding: 67px 0;
-      }
-
-      .project-grid,
-      .skills-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .timeline-row {
-        grid-template-columns: 1fr;
-        gap: 7px;
-      }
-
-      .contact-shell {
-        padding: 25px 20px;
-        border-radius: 22px;
-      }
-
-      .footer {
-        align-items: flex-start;
-        flex-direction: column;
-      }
+      --paper:#f5f3ee; --ink:#18221e; --muted:#68716b; --line:#d9ddd5;
+      --green:#c8f169; --green-dark:#2d4d31; --card:#fffefa; --lavender:#e5defa;
+      --orange:#ff956d; --shadow:0 18px 50px rgba(30,45,34,.08);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:88px}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.6}
+    a{color:inherit}
+    button,a{-webkit-tap-highlight-color:transparent}
+    .wrap{width:min(1120px,calc(100% - 44px));margin:0 auto}
+    .mono{font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.12em}
+    .topbar{position:sticky;top:0;z-index:30;backdrop-filter:blur(18px);background:rgba(245,243,238,.86);border-bottom:1px solid rgba(217,221,213,.8)}
+    .nav{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:800;letter-spacing:-.04em}
+    .brand-mark{display:grid;place-items:center;width:34px;height:34px;background:var(--green);border-radius:50%;font:700 13px "DM Mono",monospace}
+    .navlinks{display:flex;align-items:center;gap:25px}
+    .navlinks a{text-decoration:none;color:var(--muted);font-size:13px;font-weight:600}
+    .navlinks a:hover{color:var(--ink)}
+    .nav-cta{padding:10px 15px;border:1px solid var(--ink);border-radius:999px;color:var(--ink)!important}
+    .hero{padding:78px 0 72px;position:relative;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:55px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--green-dark);margin-bottom:22px}
+    .status-dot{width:8px;height:8px;border-radius:50%;background:#6eaa42;box-shadow:0 0 0 5px rgba(110,170,66,.13)}
+    h1,h2,h3,p{margin-top:0}
+    h1{font:800 clamp(48px,7.2vw,86px)/.99 "Manrope",sans-serif;letter-spacing:-.075em;max-width:750px;margin-bottom:25px}
+    h1 .soft{color:#7e887f}
+    .hero-copy{font-size:17px;max-width:580px;color:#58645b;line-height:1.8;margin-bottom:29px}
+    .actions{display:flex;flex-wrap:wrap;gap:11px;align-items:center}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;padding:13px 18px;border-radius:999px;border:1px solid var(--ink);font-weight:700;font-size:13px;transition:transform .2s,background .2s}
+    .btn:hover{transform:translateY(-3px)}
+    .btn.primary{background:var(--ink);color:white}
+    .btn.secondary{background:transparent}
+    .hero-art{min-height:365px;position:relative;display:grid;place-items:center}
+    .orbit{position:absolute;width:320px;height:320px;border:1px solid #cdd4c9;border-radius:50%;transform:rotate(-23deg) scaleY(.76)}
+    .orbit:after{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:var(--orange);top:27px;left:57px}
+    .profile-card{width:min(280px,80%);aspect-ratio:.82;border-radius:145px 145px 28px 28px;background:var(--green);position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;box-shadow:var(--shadow);transform:rotate(3deg)}
+    .profile-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:145px 145px 28px 28px;border:1px solid rgba(0,0,0,.12);box-shadow:0 12px 30px rgba(0,0,0,.08);z-index:1;transition:transform .35s ease}
+    .profile-card:hover .profile-photo{transform:scale(1.025)}
+    .monogram{display:none;position:absolute;top:64px;font:800 88px/.9 "Manrope",sans-serif;letter-spacing:-.1em;color:#31523a;z-index:1}
+    .profile-caption{width:calc(100% - 28px);margin:0 14px 14px;background:rgba(255,254,250,.92);backdrop-filter:blur(8px);padding:13px 15px;border-radius:17px;position:relative;z-index:2;flex-shrink:0}
+    .profile-caption strong{display:block;font-size:13px}
+    .profile-caption span{color:var(--muted);font-size:11px}
+    .floating-note{position:absolute;z-index:3;background:var(--card);border:1px solid var(--line);border-radius:13px;padding:12px 15px;box-shadow:var(--shadow);font-size:12px;font-weight:700}
+    .note-one{top:48px;right:-4px;transform:rotate(5deg)}
+    .note-two{bottom:38px;left:-8px;transform:rotate(-5deg);background:var(--lavender)}
+    .ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0;overflow:hidden}
+    .ticker-inner{display:flex;justify-content:space-between;align-items:center;gap:22px;color:var(--muted);flex-wrap:wrap}
+    .ticker span{white-space:nowrap}
+    .ticker .star{color:#7b8f53;font-size:19px;padding:0 7px}
+    section.content-section{padding:94px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:34px}
+    .section-label{color:var(--muted);margin-bottom:12px}
+    h2{font:800 clamp(32px,4.5vw,52px)/1.08 "Manrope",sans-serif;letter-spacing:-.06em;margin-bottom:0}
+    .section-intro{max-width:390px;color:var(--muted);margin-bottom:4px;font-size:14px}
+    .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px}
+    .about-stamp{border-radius:24px;min-height:300px;padding:28px;background:var(--lavender);display:flex;flex-direction:column;justify-content:space-between}
+    .stamp-big{font:800 76px/.9 "Manrope",sans-serif;letter-spacing:-.09em}
+    .stamp-bottom{display:flex;justify-content:space-between;gap:12px;font-size:12px;color:#4f4a6b}
+    .about-text{font-size:17px;color:#58645b;line-height:1.9}
+    .about-text strong{color:var(--ink)}
+    .pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:25px}
+    .pill{border:1px solid var(--line);padding:8px 12px;border-radius:999px;font-size:12px;color:#58645b;background:rgba(255,254,250,.5)}
+    .dark-section{background:#202c25;color:#f6f5ee}
+    .dark-section .section-label,.dark-section .section-intro{color:#b9c3b9}
+    .project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .project{background:#2a392f;border:1px solid #415146;border-radius:22px;overflow:hidden;transition:transform .25s,border-color .25s}
+    .project:hover{transform:translateY(-4px);border-color:#9cb97c}
+    .project-visual{min-height:190px;padding:24px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .visual-social{background:#d6edb0;color:#213a27}
+    .visual-code{background:#dcd4f4;color:#302b48}
+    .visual-cloud{background:#f4b69b;color:#472e25}
+    .visual-data{background:#b8dce0;color:#1e3c40}
+    .visual-shape{width:160px;height:115px;border:1.5px solid currentColor;border-radius:12px;transform:rotate(-7deg);display:flex;flex-direction:column;gap:9px;padding:16px;box-shadow:12px 13px 0 rgba(0,0,0,.08)}
+    .visual-shape span{height:7px;border-radius:4px;background:currentColor;opacity:.45;width:80%}
+    .visual-shape span:nth-child(2){width:55%}
+    .visual-shape span:nth-child(3){width:68%}
+    .visual-word{font:800 36px/.95 "Manrope",sans-serif;letter-spacing:-.08em;transform:rotate(-5deg)}
+    .project-body{padding:23px 24px 25px}
+    .project-meta{color:#bdc9bd;font:11px "DM Mono",monospace;text-transform:uppercase;letter-spacing:.08em}
+    .project h3{font:700 22px "Manrope",sans-serif;letter-spacing:-.04em;margin:12px 0 9px}
+    .project p{color:#c2cec3;font-size:13px;line-height:1.8;margin-bottom:18px}
+    .project-tags{display:flex;flex-wrap:wrap;gap:7px}
+    .project-tags span{color:#e3e9de;border:1px solid #536357;padding:5px 9px;border-radius:999px;font-size:10px}
+    .project-footnote{margin-top:20px;color:#b9c3b9;font-size:12px}
+    .project-details{margin-top:18px;border-top:1px solid #536357;padding-top:14px}
+    .project-details summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;color:#d6edb0;font-size:13px;font-weight:700;padding:8px 0}
+    .project-details summary::-webkit-details-marker{display:none}
+    .project-details summary::after{content:"＋";font-size:18px;line-height:1}
+    .project-details[open] summary::after{content:"−"}
+    .details-content{padding:12px 0 4px}
+    .details-content h4{font:700 14px "Manrope",sans-serif;color:#f6f5ee;margin:18px 0 6px}
+    .details-content p,.details-content li{font-size:13px;line-height:1.8;color:#c2cec3}
+    .details-content ul{padding-left:19px;margin:6px 0 12px}
+    .evidence-box{margin-top:15px;padding:16px;border:1px solid #536357;border-radius:14px;background:rgba(255,255,255,.035)}
+    .evidence-box p{margin-bottom:8px}
+    .evidence-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .evidence-link{display:inline-flex;align-items:center;gap:7px;padding:8px 11px;border:1px solid #657568;border-radius:999px;color:#e3e9de;text-decoration:none;font-size:11px;font-weight:700}
+    .evidence-link:hover{background:#415146}
+    .career-section{padding:66px 0}
+    .career-panel{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .career-card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px}
+    .career-card h3{font:700 19px "Manrope",sans-serif;margin-bottom:8px}
+    .career-card p{color:var(--muted);font-size:13px;margin-bottom:18px}
+    .goal-number{font:800 clamp(38px,5vw,58px)/1 "Manrope",sans-serif;letter-spacing:-.07em}
+    .goal-number span{font-size:15px;font-weight:600;letter-spacing:0;color:var(--muted)}
+    .goal-track{height:8px;background:#e6e8df;border-radius:999px;overflow:hidden;margin:17px 0 9px}
+    .goal-track span{display:block;width:100%;height:100%;background:var(--green-dark);border-radius:999px}
+    .goal-caption{font:10px "DM Mono",monospace;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+    .contact-shell{background:var(--green);border-radius:28px;padding:clamp(28px,5vw,58px);display:grid;grid-template-columns:1fr .85fr;gap:45px;align-items:start}
+    .contact-shell h2{max-width:520px}
+    .contact-shell .section-label{color:#405a35}
+    .contact-copy{color:#405a35;margin:19px 0 25px;max-width:430px}
+    .contact-links{display:flex;flex-direction:column;gap:10px}
+    .contact-link{display:flex;align-items:center;justify-content:space-between;gap:15px;text-decoration:none;background:rgba(255,255,255,.43);border:1px solid rgba(24,34,30,.12);padding:13px 15px;border-radius:13px;font-size:13px;font-weight:700;overflow-wrap:anywhere}
+    .contact-link:hover{background:rgba(255,255,255,.72)}
+    .starter-title{font:700 15px "Manrope",sans-serif;margin-bottom:6px}
+    .starter-help{color:#405a35;font-size:12px;margin-bottom:14px}
+    .starter-list{display:grid;gap:9px}
+    .starter{text-align:left;border:1px solid rgba(24,34,30,.18);border-radius:13px;background:rgba(255,255,255,.32);padding:12px 14px;cursor:pointer;color:var(--ink);font:600 12px/1.55 "DM Sans",sans-serif;transition:background .2s,transform .2s}
+    .starter:hover,.starter.active{background:#fffefa;transform:translateX(3px)}
+    .starter small{display:block;color:#63715e;font:10px "DM Mono",monospace;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+    .contact-submit{margin-top:13px;width:100%;border:0;cursor:pointer}
+    .footer{padding:28px 0 35px;display:flex;align-items:center;justify-content:space-between;gap:20px;color:var(--muted);font-size:12px}
+    .footer a{text-decoration:none}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    .cursor-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--orange);margin-left:5px;vertical-align:middle}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}.reveal{opacity:1;transform:none}}
+    @media(max-width:800px){
+      .hero-grid,.about-grid,.contact-shell{grid-template-columns:1fr}
+      .hero{padding-top:55px}.hero-art{min-height:330px;margin-top:0}
+      .orbit{width:275px;height:275px}.profile-card{width:235px}
+      .section-head{display:block}.section-intro{margin-top:16px}
+      .contact-shell{gap:30px}
+    }
+    @media(max-width:560px){
+      .wrap{width:min(calc(100% - 30px),1120px)}
+      .nav{min-height:65px}.navlinks{gap:12px}.navlinks a:not(.nav-cta){display:none}
+      .hero{padding:49px 0 45px}.hero-grid{gap:16px}.hero-copy{font-size:15px}
+      .hero-art{min-height:300px}.note-one{right:0}.note-two{left:0}
+      section.content-section{padding:67px 0}
+      .project-grid,.career-panel{grid-template-columns:1fr}
+      .contact-shell{padding:25px 20px;border-radius:22px}
+      .footer{align-items:flex-start;flex-direction:column}
     }
   </style>
 </head>
-
 <body>
-
-  <!-- Navigation -->
-
   <header class="topbar">
     <nav class="nav wrap" aria-label="Main navigation">
-
-      <a class="brand" href="#home" aria-label="Elson Pereira home">
-        <span class="brand-mark">EP</span>
-        <span>Elson Pereira<span class="cursor-dot"></span></span>
-      </a>
-
+      <a class="brand" href="#home" aria-label="Elson Pereira home"><span class="brand-mark">EP</span><span>Elson Pereira<span class="cursor-dot"></span></span></a>
       <div class="navlinks">
         <a href="#about">About</a>
         <a href="#work">Selected work</a>
-        <a href="#journey">Journey</a>
+        <a href="#goals">Career goals</a>
         <a class="nav-cta" href="#contact">Say hello ↗</a>
       </div>
-
     </nav>
   </header>
 
   <main>
-
-    <!-- Hero -->
-
     <section class="hero" id="home">
-
       <div class="wrap hero-grid">
-
         <div class="reveal">
-
-          <div class="eyebrow mono">
-            <span class="status-dot"></span>
-            Open to good conversations
-          </div>
-
-          <h1>
-            Curious mind.<br>
-            <span class="soft">Practical builder.</span><br>
-            People first.
-          </h1>
-
-          <p class="hero-copy">
-            I’m Elson — a software engineering and IT professional
-            who likes turning tangled technical problems into clear,
-            useful solutions. Currently growing at the intersection
-            of software, systems, and cloud technology.
-          </p>
-
+          <div class="eyebrow mono"><span class="status-dot"></span> Open to good conversations</div>
+          <h1>Curious mind.<br><span class="soft">Practical builder.</span><br>People first.</h1>
+          <p class="hero-copy">I’m Elson — a software engineering and IT professional who likes turning tangled technical problems into clear, useful solutions. Currently growing at the intersection of software, systems, and cloud technology.</p>
           <div class="actions">
-            <a class="btn primary" href="#work">
-              Explore my work <span>↘</span>
-            </a>
-
-            <a class="btn secondary" href="#contact">
-              Start a conversation <span>↗</span>
-            </a>
+            <a class="btn primary" href="#work">Explore my work <span>↘</span></a>
+            <a class="btn secondary" href="#contact">Start a conversation <span>↗</span></a>
           </div>
-
         </div>
-
-        <!-- Profile photo -->
-
         <div class="hero-art reveal" aria-label="Elson Pereira profile photo">
-
           <div class="orbit"></div>
-
-          <div class="floating-note note-one">
-            Build with purpose ✳
-          </div>
-
+          <div class="floating-note note-one">Build with purpose ✳</div>
           <div class="profile-card">
-
-            <img
-              src="elson-pereira.jpg"
-              alt="Elson Pereira — Software and Database Engineer"
-              class="profile-photo"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
-            >
-
-            <!-- Fallback if the photo is missing -->
-
+            <img src="elson-pereira.jpg" alt="Elson Pereira — Software and Database Engineer" class="profile-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
             <div class="monogram">EP</div>
-
-            <div class="profile-caption">
-              <strong>Elson Pereira</strong>
-              <span>Engineer by training · Curious by default</span>
-            </div>
-
+            <div class="profile-caption"><strong>Elson Pereira</strong><span>Engineer by training · Curious by default</span></div>
           </div>
-
-          <div class="floating-note note-two">
-            Currently: learning → shipping → improving
-          </div>
-
+          <div class="floating-note note-two">Currently: learning → shipping → improving</div>
         </div>
-
       </div>
-
     </section>
-
-    <!-- Expertise ticker -->
 
     <div class="ticker">
-
       <div class="wrap ticker-inner mono">
-
-        <span>
-          Software engineering <b class="star">✳</b>
-        </span>
-
-        <span>
-          Thoughtful problem-solving <b class="star">✳</b>
-        </span>
-
-        <span>
-          IT systems <b class="star">✳</b>
-        </span>
-
-        <span>
-          Cloud curiosity <b class="star">✳</b>
-        </span>
-
+        <span>Software engineering <b class="star">✳</b></span>
+        <span>Thoughtful problem-solving <b class="star">✳</b></span>
+        <span>IT systems <b class="star">✳</b></span>
+        <span>Cloud curiosity <b class="star">✳</b></span>
         <span>Human collaboration</span>
-
       </div>
-
     </div>
 
-    <!-- About -->
-
     <section class="content-section" id="about">
-
       <div class="wrap">
-
         <div class="section-head reveal">
-
-          <div>
-            <p class="section-label mono">01 / A little about me</p>
-
-            <h2>
-              Technology is the tool.<br>
-              People are the point.
-            </h2>
-          </div>
-
-          <p class="section-intro">
-            A mix of engineering foundations, hands-on problem-solving,
-            and a genuine interest in how things work.
-          </p>
-
+          <div><p class="section-label mono">01 / A little about me</p><h2>Technology is the tool.<br>People are the point.</h2></div>
+          <p class="section-intro">A mix of engineering foundations, hands-on problem-solving, and a genuine interest in how things work.</p>
         </div>
-
         <div class="about-grid">
-
           <div class="about-stamp reveal">
-
             <span class="mono">The short version</span>
-
-            <div class="stamp-big">
-              Learn.<br>
-              Build.<br>
-              Repeat.
-            </div>
-
-            <div class="stamp-bottom">
-              <span>Based in Australia</span>
-              <span>Always curious ↗</span>
-            </div>
-
+            <div class="stamp-big">Learn.<br>Build.<br>Repeat.</div>
+            <div class="stamp-bottom"><span>Based in Australia</span><span>Always curious ↗</span></div>
           </div>
-
           <div class="reveal">
-
-            <p class="about-text">
-              I completed a
-              <strong>Master of Information Technology and Systems
-              at the University of Canberra</strong>
-              and previously worked as a Software Engineer at
-              Mobileware Technologies.
-            </p>
-
-            <p class="about-text">
-              My experience spans application development, databases,
-              troubleshooting, and working with people in busy,
-              service-focused environments. I like understanding
-              the whole picture — not just whether something works,
-              but <strong>why it works and how to make it better.</strong>
-            </p>
-
-            <p class="about-text">
-              I’m continuing to grow my skills across software development,
-              IT operations, and cloud technologies, with a long-term goal
-              of becoming a technical solutions architect.
-            </p>
-
-            <div class="pill-row">
-              <span class="pill">Systems thinking</span>
-              <span class="pill">Clear communication</span>
-              <span class="pill">Continuous learning</span>
-              <span class="pill">Team-first mindset</span>
-            </div>
-
+            <p class="about-text">I completed a <strong>Master of Information Technology and Systems at the University of Canberra</strong> and previously worked as a Software Engineer at Mobileware Technologies.</p>
+            <p class="about-text">My experience spans application development, databases, troubleshooting, and working with people in busy, service-focused environments. I like understanding the whole picture — not just whether something works, but <strong>why it works and how to make it better.</strong></p>
+            <p class="about-text">I’m continuing to grow my skills across software development, IT operations, and cloud technologies, with a long-term goal of becoming a technical solutions architect.</p>
+            <div class="pill-row"><span class="pill">Systems thinking</span><span class="pill">Clear communication</span><span class="pill">Continuous learning</span><span class="pill">Team-first mindset</span></div>
           </div>
-
         </div>
-
       </div>
-
     </section>
 
-    <!-- Projects -->
-
     <section class="content-section dark-section" id="work">
-
       <div class="wrap">
-
         <div class="section-head reveal">
-
-          <div>
-            <p class="section-label mono">02 / Selected work</p>
-
-            <h2>
-              Things I’ve built<br>
-              and things I’m exploring.
-            </h2>
-          </div>
-
-          <p class="section-intro">
-            A work in progress — the best way to learn is to make
-            something real, test it, and keep improving it.
-          </p>
-
+          <div><p class="section-label mono">02 / Selected work</p><h2>One project in depth.<br>More to explore.</h2></div>
+          <p class="section-intro">Open the project details to read about the problem, contribution, delivery approach, strategy, lessons learned, and supporting evidence.</p>
         </div>
 
         <div class="project-grid">
-
           <article class="project reveal">
-
-            <div class="project-visual visual-social">
-              <div class="visual-shape">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </div>
-
+            <div class="project-visual visual-social"><div class="visual-shape"><span></span><span></span><span></span></div></div>
             <div class="project-body">
-
-              <div class="project-meta">
-                Featured project · Full stack
-              </div>
-
+              <div class="project-meta">Featured project · Full stack</div>
               <h3>Social Awareness Platform</h3>
+              <p>A single-page application designed to raise awareness of social causes and help small businesses connect with their communities.</p>
+              <div class="project-tags"><span>React</span><span>Express.js</span><span>MySQL</span><span>Cloud deployment</span></div>
 
-              <p>
-                A single-page application concept that helps raise
-                awareness of social causes while giving small businesses
-                a place to reach their communities.
-              </p>
+              <details class="project-details">
+                <summary>Explore project details</summary>
+                <div class="details-content">
+                  <h4>Project overview</h4>
+                  <p>The Social Awareness Platform is a full-stack single-page application designed to connect people with social causes and help small businesses reach their communities. Users can discover causes such as climate change and homelessness, browse by category or location, and find organisations and local services in one place.</p>
+                  <p>The solution combines a React user interface, an Express.js REST API, a relational database, and cloud database/deployment planning. It also considers the administrative tools needed to keep content organised, review activity, and support platform governance.</p>
 
-              <div class="project-tags">
-                <span>React</span>
-                <span>Express.js</span>
-                <span>MySQL</span>
-                <span>Cloud deployment</span>
-              </div>
+                  <h4>Problem and purpose</h4>
+                  <p>Social initiatives and smaller businesses can struggle to reach the right audience. The platform aims to make information easier to discover by organising content around causes, categories, and locations, while giving registered users tools to manage their content.</p>
 
+                  <h4>My contribution</h4>
+                  <ul>
+                    <li>Contributed to project planning and translated requirements into application features and technical tasks.</li>
+                    <li>Worked on relational database design for users, roles, login sessions, and password-reset workflows.</li>
+                    <li>Contributed to the React frontend, Express.js backend structure, REST API integration, and MySQL data layer.</li>
+                    <li>Designed requirements for a content management workflow so authorised users can create and maintain causes, business profiles, and promotional content.</li>
+                    <li>Helped define an administrative analytics dashboard to give administrators a clearer view of platform activity, content, business registrations, and moderation needs.</li>
+                    <li>Considered Google Cloud SQL as the managed relational database service, including connectivity, access, configuration, and deployment considerations.</li>
+                    <li>Supported testing, troubleshooting, technical documentation, and cloud deployment preparation as part of the project team.</li>
+                  </ul>
+
+                  <h4>Approach and strategy</h4>
+                  <ul>
+                    <li><strong>Start with user needs:</strong> identify the needs of content creators, organisations, businesses, visitors, and administrators.</li>
+                    <li><strong>Requirements first:</strong> map the needs of visitors, content creators, small businesses, and administrators before shaping features.</li>
+                    <li><strong>Modular architecture:</strong> separate authentication, cause discovery, business registration, advertising, content management, analytics, and administration so each area can be built and tested independently.</li>
+                    <li><strong>Data integrity:</strong> use relational tables and clear relationships for identity, roles, sessions, password resets, causes, and business records.</li>
+                    <li><strong>Managed cloud database:</strong> plan for Google Cloud SQL as the database service, with secure connectivity and controlled access rather than exposing database access publicly.</li>
+                    <li><strong>Incremental delivery:</strong> build and verify user journeys in small steps, test API behaviour with tools such as Postman, and troubleshoot issues using repeatable checks.</li>
+                    <li><strong>Security and reliability by design:</strong> consider role-based access, HTTPS, backups, performance, accessibility, and recovery requirements early.</li>
+                    <li><strong>Evidence-led handover:</strong> maintain setup instructions, database notes, test results, and deployment guidance so the solution can be understood and continued by others.</li>
+                  </ul>
+
+                  <h4>Key features and requirements considered</h4>
+                  <ul>
+                    <li>User registration, sign-in, profiles, and password reset.</li>
+                    <li>Create and manage social causes, with category and location-based browsing.</li>
+                    <li>Business registration, promotional listings, and business dashboards.</li>
+                    <li>Content management workflows for creating and maintaining causes and business information.</li>
+                    <li>Administrative analytics dashboard for reviewing platform activity and supporting moderation decisions.</li>
+                    <li>Google Cloud SQL database planning and cloud deployment considerations.</li>
+                    <li>Responsive design, access control, secure connections, backups, and test coverage.</li>
+                  </ul>
+
+                  <h4>Skills and lessons gained</h4>
+                  <ul>
+                    <li>Full-stack application architecture and frontend/backend integration.</li>
+                    <li>Relational database modelling and thinking through data relationships.</li>
+                    <li>Breaking broad requirements into smaller features and practical tasks.</li>
+                    <li>Debugging integration problems and checking assumptions methodically.</li>
+                    <li>Considering security, accessibility, reliability, and maintainability early.</li>
+                    <li>REST API integration, endpoint testing, and structured troubleshooting.</li>
+                    <li>Cloud database concepts, Google Cloud SQL connectivity, and deployment planning.</li>
+                    <li>Thinking through content workflows, dashboard metrics, and admin-facing requirements.</li>
+                    <li>Team communication, technical documentation, and practical handover planning.</li>
+                  </ul>
+
+                  <div class="evidence-box">
+                    <h4>Documented evidence</h4>
+                    <p>Open these clickable resources to review the public project profile and portfolio. For a stronger evidence trail, replace the GitHub profile destinations with direct links to the relevant README, schema, test report, or deployment guide once those files are published.</p>
+                    <div class="evidence-links">
+                      <a class="evidence-link" href="https://github.com/ellup260" target="_blank" rel="noopener noreferrer">↗ GitHub repositories</a>
+                      <a class="evidence-link" href="https://www.linkedin.com/in/elson-pereira" target="_blank" rel="noopener noreferrer">↗ LinkedIn profile</a>
+                      <a class="evidence-link" href="https://ellup260.github.io/" target="_blank" rel="noopener noreferrer">↗ Live portfolio</a>
+                    </div>
+                  </div>
+                </div>
+              </details>
             </div>
-
           </article>
 
           <article class="project reveal">
-
-            <div class="project-visual visual-code">
-              <div class="visual-word">&lt;solve/&gt;</div>
-            </div>
-
+            <div class="project-visual visual-code"><div class="visual-word">&lt;solve/&gt;</div></div>
             <div class="project-body">
-
-              <div class="project-meta">
-                Engineering foundation
-              </div>
-
+              <div class="project-meta">Professional experience · Mobileware Technologies</div>
               <h3>Application development</h3>
-
-              <p>
-                Professional experience working with Java, JSP,
-                Servlets, relational databases, and web technologies
-                to support application functionality.
-              </p>
-
-              <div class="project-tags">
-                <span>Java</span>
-                <span>SQL Server</span>
-                <span>HTML/CSS</span>
-                <span>Debugging</span>
-              </div>
-
+              <p>Software engineering experience supporting web application functionality using Java, JSP, Servlets, SQL Server, and frontend technologies.</p>
+              <div class="project-tags"><span>Java</span><span>JSP / Servlets</span><span>SQL Server</span><span>HTML/CSS</span></div>
+              <details class="project-details">
+                <summary>Explore project experience</summary>
+                <div class="details-content">
+                  <h4>Contribution and approach</h4>
+                  <ul>
+                    <li>Worked with Java-based web application components and server-side request handling.</li>
+                    <li>Used relational database concepts and SQL to support application data needs.</li>
+                    <li>Investigated issues by reproducing behaviour, checking application logic and data, and validating fixes.</li>
+                    <li>Worked across frontend markup and backend components to understand how user actions move through the application.</li>
+                  </ul>
+                  <h4>Skills developed</h4>
+                  <p>Java web development, SQL and relational data, application troubleshooting, reading existing code, debugging, and understanding the relationship between frontend, backend, and database layers.</p>
+                  <div class="evidence-links"><a class="evidence-link" href="https://www.linkedin.com/in/elson-pereira" target="_blank" rel="noopener noreferrer">↗ LinkedIn profile</a><a class="evidence-link" href="https://github.com/ellup260" target="_blank" rel="noopener noreferrer">↗ GitHub profile</a></div>
+                </div>
+              </details>
             </div>
-
           </article>
 
           <article class="project reveal">
-
-            <div class="project-visual visual-cloud">
-              <div class="visual-word">cloud / systems</div>
-            </div>
-
+            <div class="project-visual visual-cloud"><div class="visual-word">cloud / data</div></div>
             <div class="project-body">
-
-              <div class="project-meta">Learning path</div>
-
-              <h3>Cloud &amp; reliable systems</h3>
-
-              <p>
-                Building a stronger understanding of deployment,
-                databases, access, reliability, and how individual
-                components work together in a system.
-              </p>
-
-              <div class="project-tags">
-                <span>Google Cloud SQL</span>
-                <span>Git</span>
-                <span>APIs</span>
-                <span>Documentation</span>
-              </div>
-
+              <div class="project-meta">Cloud database and systems</div>
+              <h3>Google Cloud SQL &amp; content management</h3>
+              <p>Database and cloud architecture work focused on structuring application data, managing content workflows, and planning secure access to a managed relational database.</p>
+              <div class="project-tags"><span>Google Cloud SQL</span><span>MySQL</span><span>Data modelling</span><span>Access control</span></div>
+              <details class="project-details">
+                <summary>Explore the technical approach</summary>
+                <div class="details-content">
+                  <h4>Solution focus</h4>
+                  <ul>
+                    <li>Model application records for users, roles, sessions, password resets, social causes, and business content.</li>
+                    <li>Plan content management workflows that let authorised users maintain cause and business information.</li>
+                    <li>Consider Google Cloud SQL for managed database hosting, along with secure connectivity, configuration, and permissions.</li>
+                    <li>Consider how the application can use dashboard summaries and administrative views to support content oversight.</li>
+                  </ul>
+                  <h4>Skills gained</h4>
+                  <p>Relational schema design, cloud database concepts, application-to-database connectivity, access-control planning, data integrity, and documenting technical decisions.</p>
+                </div>
+              </details>
             </div>
-
           </article>
 
           <article class="project reveal">
-
-            <div class="project-visual visual-data">
-              <div class="visual-shape">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </div>
-
+            <div class="project-visual visual-data"><div class="visual-shape"><span></span><span></span><span></span></div></div>
             <div class="project-body">
-
-              <div class="project-meta">Core practice</div>
-
-              <h3>Debugging &amp; data</h3>
-
-              <p>
-                Working through technical issues methodically:
-                checking evidence, tracing behaviour, testing
-                assumptions, and documenting what changed.
-              </p>
-
-              <div class="project-tags">
-                <span>SQL</span>
-                <span>Postman</span>
-                <span>Testing</span>
-                <span>Root-cause thinking</span>
-              </div>
-
+              <div class="project-meta">Machine learning / computer vision</div>
+              <h3>Bird Species Classifier</h3>
+              <p>A computer-vision project exploring how image-processing and classification techniques can help identify bird species from image data.</p>
+              <div class="project-tags"><span>Python</span><span>Computer vision</span><span>Image processing</span><span>Classification</span></div>
+              <details class="project-details">
+                <summary>Explore project details</summary>
+                <div class="details-content">
+                  <h4>Approach</h4>
+                  <ul>
+                    <li>Structure the task as an image-classification problem and consider the quality and consistency of the image data.</li>
+                    <li>Use Python-based workflows to prepare images, examine model inputs, and evaluate classification behaviour.</li>
+                    <li>Review incorrect predictions to understand where similar visual features may confuse a classifier.</li>
+                  </ul>
+                  <h4>Skills developed</h4>
+                  <p>Image-processing concepts, computer-vision workflows, data preparation, classification evaluation, and communicating technical results. Add the exact model, dataset, and measured accuracy from your project report before publishing those specifics.</p>
+                </div>
+              </details>
             </div>
-
           </article>
 
-        </div>
-
-        <p class="project-footnote">
-          Project note: add links to public repositories or live demos
-          when they’re ready. Don’t publish confidential work or credentials.
-        </p>
-
-      </div>
-
-    </section>
-
-    <!-- Journey -->
-
-    <section class="content-section" id="journey">
-
-      <div class="wrap">
-
-        <div class="section-head reveal">
-
-          <div>
-            <p class="section-label mono">03 / The journey so far</p>
-
-            <h2>
-              Foundations that<br>
-              keep moving forward.
-            </h2>
-          </div>
-
-          <p class="section-intro">
-            A snapshot of the experience and education that shape
-            how I approach problems.
-          </p>
-
-        </div>
-
-        <div class="timeline">
-
-          <div class="timeline-row reveal">
-
-            <div class="timeline-date">Education</div>
-
-            <div>
-
-              <h3>Master of Information Technology and Systems</h3>
-
-              <p class="where">
-                University of Canberra · Australia
-              </p>
-
-              <p>
-                Studied areas including Computer Vision,
-                Image Processing, and Software Technology.
-              </p>
-
+          <article class="project reveal">
+            <div class="project-visual visual-code"><div class="visual-word">data → insight</div></div>
+            <div class="project-body">
+              <div class="project-meta">Data visualisation / analytics</div>
+              <h3>Emotion Analysis Dashboard</h3>
+              <p>An analytics-focused project presenting emotion-analysis results in a dashboard format to make patterns and outputs easier to inspect.</p>
+              <div class="project-tags"><span>Python</span><span>Data analysis</span><span>Dashboard</span><span>Visualisation</span></div>
+              <details class="project-details">
+                <summary>Explore project details</summary>
+                <div class="details-content">
+                  <h4>Approach and strategy</h4>
+                  <ul>
+                    <li>Organise analysis outputs into a structure that supports review and comparison.</li>
+                    <li>Use dashboard-style visual presentation to make results easier to interpret than raw output alone.</li>
+                    <li>Consider clear labels, useful summaries, and readable visual hierarchy so users can understand the information quickly.</li>
+                  </ul>
+                  <h4>Skills developed</h4>
+                  <p>Analytical thinking, presenting model outputs, dashboard design, data interpretation, and explaining technical results to an audience. Add the specific libraries, data source, and metrics from your original project if you want to showcase them.</p>
+                </div>
+              </details>
             </div>
-
-          </div>
-
-          <div class="timeline-row reveal">
-
-            <div class="timeline-date">Oct 2020 — Feb 2022</div>
-
-            <div>
-
-              <h3>Software Engineer</h3>
-
-              <p class="where">
-                Mobileware Technologies Pvt. Ltd.
-              </p>
-
-              <p>
-                Worked with Java, JSP, Servlets, relational databases,
-                Microsoft SQL Server, HTML, and CSS.
-              </p>
-
-            </div>
-
-          </div>
-
-          <div class="timeline-row reveal">
-
-            <div class="timeline-date">Now &amp; next</div>
-
-            <div>
-
-              <h3>Connecting software, support, and systems</h3>
-
-              <p class="where">Learning through practical work</p>
-
-              <p>
-                Developing a broader technical toolkit and aiming toward
-                solutions architecture — where understanding people,
-                systems, and trade-offs matters as much as the code.
-              </p>
-
-            </div>
-
-          </div>
-
+          </article>
         </div>
 
       </div>
-
     </section>
 
-    <!-- Skills -->
+    <!-- The former Journey and Skills sections have been removed. -->
 
-    <section class="content-section" style="padding-top: 0">
-
+    <section class="content-section" id="contact" style="padding-top:20px">
       <div class="wrap">
-
-        <div class="section-head reveal">
-
-          <div>
-            <p class="section-label mono">04 / My toolkit</p>
-
-            <h2>
-              Curiosity, backed<br>
-              by useful skills.
-            </h2>
-          </div>
-
-          <p class="section-intro">
-            A selection of technologies and practices from my background.
-            I keep learning, and I’m careful to distinguish hands-on
-            experience from areas I’m developing.
-          </p>
-
-        </div>
-
-        <div class="skills-grid">
-
-          <article class="skill-card reveal">
-            <div class="skill-icon">⌘</div>
-            <h3>Development</h3>
-            <p>
-              Java, Python, HTML, CSS, JavaScript fundamentals,
-              JSP, Servlets, REST API concepts.
-            </p>
-          </article>
-
-          <article class="skill-card reveal">
-            <div class="skill-icon">▤</div>
-            <h3>Databases</h3>
-            <p>
-              MySQL, PostgreSQL, Oracle, SQL Server,
-              relational data, queries, and schema concepts.
-            </p>
-          </article>
-
-          <article class="skill-card reveal">
-            <div class="skill-icon">⌁</div>
-            <h3>Tools &amp; platforms</h3>
-            <p>
-              Git, Postman, Apache Tomcat, Google Cloud SQL,
-              Cloud SQL Proxy.
-            </p>
-          </article>
-
-          <article class="skill-card reveal">
-            <div class="skill-icon">◎</div>
-            <h3>Troubleshooting</h3>
-            <p>
-              Application troubleshooting, incident resolution,
-              log analysis, and technical documentation.
-            </p>
-          </article>
-
-          <article class="skill-card reveal">
-            <div class="skill-icon">✓</div>
-            <h3>Testing &amp; quality</h3>
-            <p>
-              Unit, regression, UAT, API testing,
-              and test-case documentation.
-            </p>
-          </article>
-
-          <article class="skill-card reveal">
-            <div class="skill-icon">↗</div>
-            <h3>Working with people</h3>
-            <p>
-              Communication, collaboration, service mindset,
-              and staying organised in busy environments.
-            </p>
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- Contact -->
-
-    <section class="content-section" id="contact" style="padding-top: 20px">
-
-      <div class="wrap">
-
         <div class="contact-shell reveal">
-
           <div>
-
-            <p class="section-label mono">05 / Your turn</p>
-
-            <h2>
-              Good things start with a conversation.
-            </h2>
-
-            <p class="contact-copy">
-              Have a role, a project, a technical question, or a different
-              way of looking at a problem? Pick a conversation starter
-              or simply say hello. I’d be glad to connect.
-            </p>
-
+            <p class="section-label mono">04 / Your turn</p>
+            <h2>Good things start with a conversation.</h2>
+            <p class="contact-copy">Have a role, a project, a technical question, or a different way of looking at a problem? Pick a conversation starter or simply say hello. I’d be glad to connect.</p>
             <div class="contact-links">
-
-              <a class="contact-link" href="mailto:ellup260@gmail.com">
-                <span>✉ &nbsp; ellup260@gmail.com</span>
-                <span>↗</span>
-              </a>
-
-              <a class="contact-link" href="tel:+61455482877">
-                <span>☎ &nbsp; 0455 482 877</span>
-                <span>↗</span>
-              </a>
-
-              <a
-                class="contact-link"
-                href="https://www.linkedin.com/in/elson-pereira"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span>in &nbsp; Connect on LinkedIn</span>
-                <span>↗</span>
-              </a>
-
-              <a
-                class="contact-link"
-                href="https://github.com/ellup260"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span>⌘ &nbsp; Explore my GitHub</span>
-                <span>↗</span>
-              </a>
-
+              <a class="contact-link" href="mailto:ellup260@gmail.com"><span>✉ &nbsp; ellup260@gmail.com</span><span>↗</span></a>
+              <a class="contact-link" href="tel:+61455482877"><span>☎ &nbsp; 0455 482 877</span><span>↗</span></a>
+              <a class="contact-link" href="https://www.linkedin.com/in/elson-pereira" target="_blank" rel="noopener noreferrer"><span>in &nbsp; Connect on LinkedIn</span><span>↗</span></a>
+              <a class="contact-link" href="https://github.com/ellup260" target="_blank" rel="noopener noreferrer"><span>⌘ &nbsp; Explore my GitHub</span><span>↗</span></a>
             </div>
-
           </div>
-
           <div>
-
             <p class="starter-title">Not sure what to say?</p>
-
-            <p class="starter-help">
-              Choose a prompt — it’ll open an email draft with a
-              conversation starter already written.
-            </p>
-
+            <p class="starter-help">Choose a prompt — it’ll open an email draft with a conversation starter already written.</p>
             <div class="starter-list">
-
-              <button
-                class="starter"
-                data-subject="A role you think I should explore"
-                data-body="Hi Elson,
-
-I came across your portfolio and wanted to connect. Have you considered exploring [role/team/opportunity]? I thought it might be a good fit because…
-
-Best,
-[Your name]"
-              >
-                <small>01 / Career &amp; opportunity</small>
-                “I know a team you should meet…”
-              </button>
-
-              <button
-                class="starter"
-                data-subject="A technical idea to compare notes on"
-                data-body="Hi Elson,
-
-I’d love to compare notes on a technical idea: [topic]. One thing I’ve been thinking about is… What’s your take?
-
-Best,
-[Your name]"
-              >
-                <small>02 / Tech talk</small>
-                “I’ve been thinking about a problem…”
-              </button>
-
-              <button
-                class="starter"
-                data-subject="A project worth collaborating on"
-                data-body="Hi Elson,
-
-I’m working on / exploring [project or idea] and thought it could be interesting to connect. Would you be open to a quick chat about it?
-
-Best,
-[Your name]"
-              >
-                <small>03 / Collaboration</small>
-                “What if we built something together?”
-              </button>
-
-              <button
-                class="starter"
-                data-subject="A quick question about your journey"
-                data-body="Hi Elson,
-
-I’m curious about your journey from software engineering toward broader technical solutions. What’s one lesson or resource that has helped you most so far?
-
-Thanks,
-[Your name]"
-              >
-                <small>04 / Learn together</small>
-                “What’s one lesson you wish you’d learned sooner?”
-              </button>
-
+              <button class="starter" data-subject="A role you think I should explore" data-body="Hi Elson,\n\nI came across your portfolio and wanted to connect. Have you considered exploring [role/team/opportunity]? I thought it might be a good fit because…\n\nBest,\n[Your name]"><small>01 / Career &amp; opportunity</small>“I know a team you should meet…”</button>
+              <button class="starter" data-subject="A technical idea to compare notes on" data-body="Hi Elson,\n\nI’d love to compare notes on a technical idea: [topic]. One thing I’ve been thinking about is… What’s your take?\n\nBest,\n[Your name]"><small>02 / Tech talk</small>“I’ve been thinking about a problem…”</button>
+              <button class="starter" data-subject="A project worth collaborating on" data-body="Hi Elson,\n\nI’m working on / exploring [project or idea] and thought it could be interesting to connect. Would you be open to a quick chat about it?\n\nBest,\n[Your name]"><small>03 / Collaboration</small>“What if we built something together?”</button>
+              <button class="starter" data-subject="A quick question about your journey" data-body="Hi Elson,\n\nI’m curious about your journey from software engineering toward broader technical solutions. What’s one lesson or resource that has helped you most so far?\n\nThanks,\n[Your name]"><small>04 / Learn together</small>“What’s one lesson you wish you’d learned sooner?”</button>
             </div>
-
-            <a
-              id="starter-email"
-              class="btn primary contact-submit"
-              href="mailto:ellup260@gmail.com?subject=Hello%20Elson"
-            >
-              Start the conversation ↗
-            </a>
-
+            <a id="starter-email" class="btn primary contact-submit" href="mailto:ellup260@gmail.com?subject=Hello%20Elson">Start the conversation ↗</a>
           </div>
-
         </div>
-
       </div>
-
     </section>
-
   </main>
 
-  <!-- Footer -->
-
   <footer class="wrap footer">
-
-    <span>
-      © <span id="year"></span> Elson Pereira · Made with curiosity.
-    </span>
-
-    <span>
-      <a href="#home">Back to top ↑</a>
-      &nbsp;·&nbsp;
-      <a
-        href="https://www.linkedin.com/in/elson-pereira"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        LinkedIn
-      </a>
-    </span>
-
+    <span>© <span id="year"></span> Elson Pereira · Made with curiosity.</span>
+    <span><a href="#home">Back to top ↑</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/elson-pereira" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
   </footer>
 
-  <!-- JavaScript -->
-
   <script>
-    // Automatically update the copyright year.
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-
-
-    // Reveal sections when they enter the viewport.
-
+    // Reveal sections as they enter the viewport.
     if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
 
-      const observer = new IntersectionObserver(
-        (entries) => {
-
-          entries.forEach((entry) => {
-
-            if (entry.isIntersecting) {
-
-              entry.target.classList.add("visible");
-
-              observer.unobserve(entry.target);
-
-            }
-
-          });
-
-        },
-        {
-          threshold: 0.12
-        }
-      );
-
-      document.querySelectorAll(".reveal").forEach((element) => {
-
-        observer.observe(element);
-
-      });
-
+      document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
     } else {
-
-      // Fallback for browsers without IntersectionObserver.
-
-      document.querySelectorAll(".reveal").forEach((element) => {
-
-        element.classList.add("visible");
-
-      });
-
+      document.querySelectorAll(".reveal").forEach((el) => el.classList.add("visible"));
     }
 
-
-    // Update the email link when a conversation starter is selected.
-
+    // Create email drafts from the selected conversation starter.
     const starterButtons = document.querySelectorAll(".starter");
-
     const emailLink = document.getElementById("starter-email");
 
     starterButtons.forEach((button) => {
-
       button.addEventListener("click", () => {
-
-        starterButtons.forEach((item) => {
-
-          item.classList.remove("active");
-
-        });
-
+        starterButtons.forEach((item) => item.classList.remove("active"));
         button.classList.add("active");
 
         const subject = encodeURIComponent(button.dataset.subject);
-
         const body = encodeURIComponent(button.dataset.body);
 
-        emailLink.href =
-          `mailto:ellup260@gmail.com?subject=${subject}&body=${body}`;
-
-        emailLink.textContent =
-          "Email this conversation starter ↗";
-
+        emailLink.href = `mailto:ellup260@gmail.com?subject=${subject}&body=${body}`;
+        emailLink.textContent = "Email this conversation starter ↗";
       });
-
     });
-  </script>
 
+
+  </script>
 </body>
 </html>
